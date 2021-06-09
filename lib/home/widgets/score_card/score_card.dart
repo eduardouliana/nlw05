@@ -5,11 +5,11 @@ import 'package:DevQuiz/core/app_text_styles.dart';
 import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 
 class ScoreCardWidget extends StatelessWidget {
-  final int score;
+  final double percent;
 
   const ScoreCardWidget({
     Key? key,
-    this.score = 0,
+    required this.percent,
   }) : super(key: key);
 
   @override
@@ -29,7 +29,7 @@ class ScoreCardWidget extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   child: ChartWidget(
-                    score: score,
+                    percent: percent,
                   ),
                 ),
               ),
